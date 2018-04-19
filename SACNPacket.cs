@@ -57,7 +57,7 @@ namespace kadmium_sacn
         static Int32 ROOT_VECTOR = 0x00000004;
 
         public FramingLayer FramingLayer { get; set; }
-        public Int16 Length { get { return (Int16)(38 + FramingLayer.Length); }  }
+        public Int16 Length { get { return (Int16)(38 + FramingLayer.Length - 16); }  }
         public Guid UUID { get; set; }
 
         public RootLayer(Guid uuid, string sourceName, Int16 universeID, byte sequenceID, byte[] data)
